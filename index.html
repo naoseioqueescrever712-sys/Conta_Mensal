@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Orçamento Mensal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>💸 Orçamento Mensal</h1>
+
+    <div class="form">
+      <input type="text" id="nome" placeholder="Ex: Aluguel">
+      <input type="number" id="valor" placeholder="R$ 0,00">
+      <button onclick="adicionarGasto()">Adicionar</button>
+    </div>
+
+    <ul id="lista"></ul>
+
+    <h2>Total: R$ <span id="total">0</span></h2>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
