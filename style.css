@@ -1,38 +1,125 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CORPO */
 body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
+/* CONTAINER PRINCIPAL */
 .container {
-  max-width: 400px;
-  margin: 50px auto;
   background: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
 }
 
+/* TÍTULO */
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+/* FORMULÁRIO */
 .form {
   display: flex;
-  gap: 5px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 input {
   flex: 1;
-  padding: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: all 0.2s;
+}
+
+input:focus {
+  border-color: #6c63ff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
 }
 
 button {
-  padding: 8px;
+  padding: 10px 15px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
+button:hover {
+  background: #574fd6;
+}
+
+/* LISTA DE GASTOS */
 ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 20px;
 }
 
 li {
   display: flex;
   justify-content: space-between;
-  margin: 8px 0;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+}
+
+li:hover {
+  background: #eaeaea;
+}
+
+li button {
+  background: #ff5c5c;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+li button:hover {
+  background: #e04848;
+}
+
+/* TOTAL */
+h2 {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+span#total {
+  font-weight: bold;
+  color: #6c63ff;
+}
+
+/* RESPONSIVO */
+@media (max-width: 450px) {
+  .form {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
 }
