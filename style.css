@@ -13,16 +13,18 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 15px; /* espaço nas laterais */
 }
 
 /* CONTAINER PRINCIPAL */
 .container {
   background: white;
-  padding: 30px 25px;
+  padding: 25px 20px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 500px; /* aumenta um pouco no desktop */
+  min-width: 280px; /* garante mínimo no celular */
   text-align: center;
 }
 
@@ -114,12 +116,35 @@ span#total {
 }
 
 /* RESPONSIVO */
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .form {
     flex-direction: column;
   }
 
   button {
     width: 100%;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  li button {
+    align-self: flex-end;
   }
 }
